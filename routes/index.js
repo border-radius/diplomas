@@ -1,6 +1,7 @@
 var fs = require('fs');
 var express = require('express');
 var router = express.Router();
+var geoip = require('geoip-lite');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,6 +10,16 @@ router.get('/', function(req, res, next) {
 
 router.get('/delivery', function(req, res, next) {
   res.render('delivery', { title: 'Доставка и оплата. Продажа дипломов по всей России' });
+});
+
+router.get('/faq', function(req, res, next) {
+  res.render('faq', { title: 'Вопросы и ответы. Продажа дипломов по всей России' });
+});
+
+router.get('/contacts', function(req, res, next) {
+  var city = geoip.lookup(req.ip);
+  console.log(city);
+  res.render('contacts', { title: 'Контакты. Продажа дипломов по всей России' });
 });
 
 router.get('/prices', function(req, res, next) {
@@ -31,6 +42,7 @@ router.get('/prices', function(req, res, next) {
     title: 'Услуги. Продажа дипломов по всей России',
     prices: prices
   });
+
 });
 
 module.exports = router;
