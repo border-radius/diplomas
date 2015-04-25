@@ -1,0 +1,221 @@
+@color: #c0392b;
+@hover: #ca4335;
+@active: #cf483a;
+@darkblue: #4A4950;
+@white: #fff;
+@nearwhite: #F1F1F4;
+@black: #000;
+@bg: rgba(239, 237, 189, 0.4);
+@callback: #081E28;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic);
+@import (less) "fontello.css";
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body, input, button {
+  font: 22px/1.4 'Open Sans Condensed';
+}
+
+input, button {
+  margin: 20px 15px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-weight: bold;
+
+  &:focus {
+    outline: 0 none;
+  }
+}
+
+input {
+  padding: 5px 7px;
+  background: none;
+  border: 0 none;
+  border-bottom: 3px solid @darkblue;
+
+  &:focus {
+    border-color: @color;
+  }
+}
+
+button {
+  padding: 10px 15px;
+  background: @color;
+  color: @white;
+  border: 0 none;
+  border-radius: 8px;
+
+  &:hover {
+    background: @hover;
+  }
+
+  &:active {
+    background: @active;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: @color;
+}
+
+::-moz-placeholder {
+color: @color;
+}
+
+:-moz-placeholder {
+color: @color;
+}
+
+:-ms-input-placeholder {
+color: @color;
+}
+
+a {
+  color: @color;
+  text-decoration: none;
+
+  &:hover {
+    color: @hover;
+  }
+
+  &:active {
+    color: @active;
+  }
+}
+
+/* */
+
+header {
+  position: relative;
+
+  i.icon-down-open {
+    margin-left: -33px;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    color: @nearwhite;
+    font-size: 48px;
+    opacity: 0.8;
+  }
+  
+  &.main {
+    background: url('/images/bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    article {
+      background: @bg;
+    }
+
+    input {
+      color: @black;
+    }
+
+    h1 {
+      color: @darkblue;
+    }
+  }
+
+  &.callback {
+    article {
+      background: @callback;
+    }
+  }
+
+  input {
+    color: @nearwhite;
+  }
+
+  article {
+    width: 100%;
+    display: table;
+    background: @black;
+
+    .center {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    h1 {
+      color: @nearwhite;
+      font-size: 48px;
+      font-weight: normal;
+    }
+  }
+
+  &, article {
+    height: 100%;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0 25px;
+      display: inline-block;
+      font-weight: bold;
+      color: @darkblue;
+      font-size: 18px;
+
+      &.logo a {
+        color: @darkblue;
+      }
+    }
+  }
+
+  form {
+    margin: 0 auto;
+    max-width: 300px;
+
+    button {
+      margin-top: 35px;
+    }
+  }
+
+  .block {
+    width: 400px;
+    height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    color: @nearwhite;
+
+    i {
+      margin-bottom: 10px;
+      font-size: 72px;
+      display: block;
+
+      &.icon-graduation-cap {
+        color: #3499C5;
+      }
+
+      &.icon-rocket {
+        color: #DE4353;
+      }
+
+      &.icon-dollar {
+        color: #63BA5D;
+      }
+
+      &.icon-award {
+        color: #ECDC3F;
+      }
+
+      &.icon-bank {
+        color: #CB9932;
+      }
+
+      &.icon-truck {
+        color: #C534B8;
+      }
+    }
+  }
+}

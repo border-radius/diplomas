@@ -1,0 +1,76 @@
+extends layout
+
+block content
+  header.main
+    i.icon-down-open
+    ul.menu
+      li.logo
+        a(href="/") Продажа дипломов по всей России
+      li
+        a(href="/prices") Услуги
+      li
+        a(href="/delivery") Доставка и оплата
+      li
+        a(href="/blog") Блог
+      li
+        a(href="/contacts") Контакты
+    article
+      .center
+        h1
+          | Оригинальные дипломы любых ВУЗов
+          br
+          | за 48 часов без предоплаты
+        form
+          input(type="text" placeholder="Ваше имя")
+          input(type="tel" placeholder="Номер телефона")
+          button Заказать
+  
+  header.callback
+    i.icon-down-open
+    article
+      .center
+
+        .block
+          i.icon-graduation-cap
+          | Гарантия качества 
+          br
+          | «Не возьмут на работу вернем Вам деньги»
+
+        .block
+          i.icon-rocket
+          | Точно в срок
+          br
+          | «За каждый день задержки - 1000руб скидка»
+
+        .block
+          i.icon-dollar
+          | Оплата по факту
+
+        .block
+          i.icon-truck
+          | Доставка за наш счет
+
+        .block
+          i.icon-bank
+          | Диплом государственного образца,
+          br
+          | оформленный в соответствии со всеми требованиями,
+          br
+          | изготавливаемый только на бланках ГОЗНАК и имеет все степени защиты
+        
+        .block
+          i.icon-award
+          | Только с оригинальными подписями и мокрыми печатями
+
+  header
+    article
+      .center
+        h1
+          | Закажите обратный звонок
+          br
+          | Перезвоним в течении часа
+
+        form
+          input(type="text" placeholder="Ваше имя")
+          input(type="tel" placeholder="Номер телефона")
+          button Заказать
