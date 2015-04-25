@@ -28,6 +28,10 @@ router.get('/contacts', function(req, res, next) {
   res.render('contacts', { title: 'Контакты. Продажа дипломов по всей России', map: map });
 });
 
+router.get('/robots.txt', function (req, res, next) {
+  res.send(fs.readFileSync('./robots.txt', { encoding: 'utf8' }));
+});
+
 router.get('/prices', function(req, res, next) {
 
   var prices = fs.readFileSync('data/items.json', { encoding: 'utf8' });
