@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  each category in prices
+    .list
+      h3= category.category
+      each item in category.items
+        .item
+          img(src='images/' + item.id + '.jpg')
+          p= item.title
+          span.oldprice= item.oldprice
+          span.price= item.price
+          button Заказать
