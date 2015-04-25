@@ -16,12 +16,13 @@ block content
         li skypeid123
         li skypeid345
 
-      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.1342787484937!2d30.357554099999987!3d59.929914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a5260c6331%3A0x6320b5608474409e!2z0J_Rg9GI0LrQuNC90YHQutCw0Y8g0YPQuy4sIDgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTEwNDA!5e0!3m2!1sru!2sru!4v1429987932111")
+      if map
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.1342787484937!2d30.357554099999987!3d59.929914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a5260c6331%3A0x6320b5608474409e!2z0J_Rg9GI0LrQuNC90YHQutCw0Y8g0YPQuy4sIDgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTEwNDA!5e0!3m2!1sru!2sru!4v1429987932111")
 
     .right
       h3 Обратная связь
       form
-        input(type="text" placeholder="Ваше имя")
-        input(type="email" placeholder="Email")
-        textarea
+        input#name(type="text" placeholder="Ваше имя")
+        input#mail(type="email" placeholder="Email")
+        textarea#text
         button Отправить

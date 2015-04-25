@@ -145,6 +145,30 @@ a {
 header {
   position: relative;
 
+  &.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 20;
+
+    article {
+      background: none;
+    }
+
+    h1 {
+      margin: 0 auto;
+      max-width: 500px;
+      color: @darkblue;
+    }
+
+    input {
+      color: @darkblue;
+    }
+  }
+
   i.icon-down-open {
     margin-left: -33px;
     position: absolute;

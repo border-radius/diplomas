@@ -2,8 +2,12 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/sweetalert.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    script(src="//code.jquery.com/jquery-1.11.2.min.js")
+    script(src="/javascripts/sweetalert.min.js")
+    script(src="/javascripts/index.js")
     ul.menu
       li.phone
         | +7 929 113-10-40
@@ -28,6 +32,19 @@ html
             | Перезвоним в течении часа
 
           form
-            input(type="text" placeholder="Ваше имя")
-            input(type="tel" placeholder="Номер телефона")
+            input#name(type="text" placeholder="Ваше имя")
+            input#phone(type="tel" placeholder="Номер телефона")
+            button Заказать
+
+    header.lightbox
+      article
+        .center
+          h1
+            | Закажите обратный звонок
+            br
+            | Перезвоним в течении часа
+
+          form
+            input#name(type="text" placeholder="Ваше имя")
+            input#phone(type="tel" placeholder="Номер телефона")
             button Заказать
