@@ -90,6 +90,27 @@ a {
 
 /* */
 
+.menu {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+
+  li {
+    margin: 0 25px;
+    display: inline-block;
+    font-weight: bold;
+    color: @darkblue;
+    font-size: 18px;
+
+    &.logo a {
+      color: @darkblue;
+    }
+  }
+}
+
 header {
   position: relative;
 
@@ -152,26 +173,6 @@ header {
     height: 100%;
   }
 
-  .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    list-style-type: none;
-
-    li {
-      margin: 0 25px;
-      display: inline-block;
-      font-weight: bold;
-      color: @darkblue;
-      font-size: 18px;
-
-      &.logo a {
-        color: @darkblue;
-      }
-    }
-  }
-
   form {
     margin: 0 auto;
     max-width: 300px;
@@ -216,6 +217,33 @@ header {
       &.icon-truck {
         color: #C534B8;
       }
+    }
+  }
+}
+
+.list {
+  padding: 75px;
+
+  .item {
+
+    img {
+      margin-right: 30px;
+      float: left;
+    }
+    
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    p {
+      font-size: 28px;
+      color: @darkblue;
+    }
+
+    button {
+      width: 300px;
     }
   }
 }
