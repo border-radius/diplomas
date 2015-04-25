@@ -7,6 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Продажа дипломов по всей России' });
 });
 
+router.get('/delivery', function(req, res, next) {
+  res.render('delivery', { title: 'Доставка и оплата. Продажа дипломов по всей России' });
+});
+
 router.get('/prices', function(req, res, next) {
 
   var prices = fs.readFileSync('data/items.json', { encoding: 'utf8' });
@@ -24,7 +28,7 @@ router.get('/prices', function(req, res, next) {
   });
   
   res.render('prices', { 
-    title: 'Услуги',
+    title: 'Услуги. Продажа дипломов по всей России',
     prices: prices
   });
 });
