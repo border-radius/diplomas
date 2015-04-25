@@ -7,6 +7,7 @@
 @black: #000;
 @bg: rgba(239, 237, 189, 0.4);
 @callback: #081E28;
+@lightblue: #FFF5FC;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic);
 @import (less) "fontello.css";
@@ -222,12 +223,14 @@ header {
 }
 
 .list {
-  padding: 75px;
+  margin: 100px auto;
+
+  max-width: 1000px;
 
   .item {
 
-    img {
-      margin-right: 30px;
+    .picture {
+      width: 350px;
       float: left;
     }
     
@@ -243,7 +246,27 @@ header {
     }
 
     button {
-      width: 300px;
+      width: 150px;
+      background: none;
+      color: @color;
+      border: 1px solid @color;
+      font-size: 18px;
+
+      &:hover {
+        background: @lightblue;
+      }
+    }
+
+    .price {
+      font-size: 28px;
+      color: @color;
+      font-weight: bold;
+    }
+
+    .oldprice {
+      margin-left: 15px;
+      text-decoration: line-through;
+      color: #666;
     }
   }
 }

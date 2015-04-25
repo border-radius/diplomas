@@ -14,8 +14,8 @@ router.get('/prices', function(req, res, next) {
   prices = JSON.parse(prices);
   prices = prices.map(function (category) {
     category.items = category.items.map(function (item) {
-      item.oldprice += ' руб';
-      item.price += ' руб';
+      item.oldprice = (item.oldprice + '').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') + ' руб.';
+      item.price = (item.price + '').replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') + ' руб.';
 
       return item;
     });
