@@ -21,7 +21,7 @@ router.get('/faq', function(req, res, next) {
 router.get('/contacts', function(req, res, next) {
   var map, city = geoip.lookup(req.ip);
   
-  if (city && city.city && city.city === 'Saint Peterburg') {
+  if (city && city.city && city.city === 'Saint Petersburg') {
     map = true;
   }
 
