@@ -138,6 +138,26 @@ button {
   color: @white;
   border: 0 none;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '\e803';
+    font-family: "fontello";
+    width: 25px;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    -webkit-transition: left 0.3s ease 0s;
+    -moz-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    position: absolute;
+    left: -50px;
+  }
+
 
   &:hover {
     background: @hover;
@@ -149,14 +169,7 @@ button {
 
   &:disabled {
     &:before {
-      margin-right: 10px;
-      content: '\e803';
-      font-family: "fontello";
-      -webkit-animation: spinner 1500ms infinite linear;
-      -moz-animation: spinner 1500ms infinite linear;
-      -ms-animation: spinner 1500ms infinite linear;
-      -o-animation: spinner 1500ms infinite linear;
-      animation: spinner 1500ms infinite linear;
+      left: 10px;
     }
   }
 }
@@ -320,7 +333,7 @@ header {
 
   form {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 420px;
 
     button {
       margin-top: 35px;

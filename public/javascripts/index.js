@@ -44,7 +44,7 @@ $(document).ready(function () {
         } else {
           swal("Сообщение отправлено!", "Мы ответим Вам на указанный email", "success");
         }
-
+        $('.lightbox').hide();
         $(e.target).find('button').removeAttr('disabled');
       }).error(function () {
         $(e.target).find('button').removeAttr('disabled');
