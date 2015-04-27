@@ -40,7 +40,7 @@ $(document).ready(function () {
 
       $.post('/request', form).success(function () {
         if (form.type === 'request') {
-          swal("Запрос отправлен!", "Мы перезвоним Вам в течении часа", "success");
+          swal("Запрос отправлен!", "Мы перезвоним Вам в течении 10 минут", "success");
         } else {
           swal("Сообщение отправлено!", "Мы ответим Вам на указанный email", "success");
         }
