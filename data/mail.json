@@ -1,9 +1,9 @@
 {
-  "from": "order@diplom24.me",
+  "from": "test@test.com",
   "smtp": {
-    "host": "diplom24.me",
-    "port": 25,
-    "secure": false,
+    "host": "smtp.mail.ru",
+    "port": 465,
+    "secure": true,
     "auth": {
       "user": "mailrutest1988@mail.ru",
       "pass": "qwe123"
