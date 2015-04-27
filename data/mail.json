@@ -1,15 +1,15 @@
 {
-  "from": "test@test.com",
+  "from": "order@diplom24.me",
   "smtp": {
-    "host": "smtp.mail.ru",
-    "port": 465,
-    "secure": true,
+    "host": "diplom24.me",
+    "port": 25,
+    "secure": false,
     "auth": {
       "user": "mailrutest1988@mail.ru",
       "pass": "qwe123"
     }
   },
-  "to": "diplomy24@mailinator.com",
+  "to": "zhices@gmail.com.com",
   "subjectPhone": "Послупил запрос обратного звонка",
   "subjectMail": "Новое сообщение по обратной связи"
 }
