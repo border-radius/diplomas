@@ -1,4 +1,18 @@
 $(document).ready(function () {
+
+  function fitHeader () {
+    if (window.location.pathname === '/') {
+      return;
+    }
+
+    var height = $('.menu').outerHeight(true);
+    $('header.main').height(height);
+  }
+
+  $(window).resize(fitHeader);
+
+  setTimeout(fitHeader, 300);
+
   $('.runbox').click(function () {
     $('.lightbox').show();
   });
