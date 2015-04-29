@@ -91,7 +91,11 @@ html, body {
 }
 
 body, input, button, textarea {
-  font: 22px/1.4 'Open Sans Condensed';
+  font: 18px/1.4 'Open Sans Condensed';
+
+  @media(min-width: 650px) {
+    font: 22px/1.4 'Open Sans Condensed';
+  }
 }
 
 input, button, textarea {
@@ -219,7 +223,11 @@ a {
     display: inline-block;
     font-weight: bold;
     color: @darkblue;
-    font-size: 22px;
+    font-size: 18px;
+
+    @media (min-width: 650px) {
+      font-size: 22px;
+    }
 
     a {
       margin: 10px 15px;
@@ -238,10 +246,11 @@ a {
     display: block;
     text-align: center;
     margin: 10px;
-    font-size: 28px;
+    font-size: 22px;
 
     @media (min-width: 650px) {
       float: right;
+      font-size: 28px;
     }
   }
 }
@@ -274,13 +283,18 @@ header {
   }
 
   i.icon-down-open {
-    margin-left: -33px;
+    margin-left: -19px;
     position: absolute;
     left: 50%;
     bottom: 25px;
     color: @nearwhite;
-    font-size: 48px;
+    font-size: 28px;
     opacity: 0.8;
+
+    @media(min-width: 650px) {
+      margin-left: -33px;
+      font-size: 48px;
+    }
   }
   
   &.main {
@@ -328,8 +342,12 @@ header {
 
     h1 {
       color: @nearwhite;
-      font-size: 48px;
+      font-size: 32px;
       font-weight: normal;
+
+      @media (min-width: 650px) {
+        font-size: 48px;
+      }
     }
   }
 
@@ -348,9 +366,13 @@ header {
 
   .block {
     width: 400px;
-    height: 250px;
+    height: 180px;
     display: inline-block;
     vertical-align: top;
+
+    @media (min-width: 650px) {
+      height: 250px;
+    }
 
     a {
       color: @nearwhite;
@@ -358,8 +380,12 @@ header {
 
     i {
       margin-bottom: 10px;
-      font-size: 72px;
+      font-size: 48px;
       display: block;
+
+      @media (min-width: 650px) {
+        font-size: 72px;
+      }
 
       &.icon-graduation-cap {
         color: #3499C5;
@@ -401,15 +427,19 @@ header {
     font-family: 'Open Sans',Arial, sans-serif;    
   }
 
-  .left {
-    width: 35%;
-    float: left;
+  @media (min-width: 650px) {
+    .left {
+      width: 35%;
+      float: left;
+    }
+
+    .right {
+      width: 60%;
+      float: right;
+    }    
   }
 
   .right {
-    width: 60%;
-    float: right;
-
     button {
       max-width: 250px;
     }
@@ -442,7 +472,7 @@ header {
 
     .picture {
       width: 350px;
-      
+
       @media (min-width: 650px) {
         float: left;
       }
@@ -455,8 +485,12 @@ header {
     }
 
     p {
-      font-size: 28px;
+      font-size: 20px;
       color: @darkblue;
+
+      @media (min-width: 650px) {
+        font-size: 28px;
+      }
     }
 
     button {
